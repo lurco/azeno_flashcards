@@ -1,0 +1,195 @@
+{
+  "decks": [
+    {
+      "difficulty": 3,
+      "tags": [
+        "python",
+        "django"
+      ],
+      "name": "python advanced",
+      "description": "Awesome deck for learning python",
+      "author": 1,
+      "id": 2
+    },
+    {
+      "difficulty": 2,
+      "tags": [
+        "js",
+        "html"
+      ],
+      "name": "js for learning basics",
+      "description": "Awesome deck for learning is",
+      "author": 1,
+      "id": 1
+    },
+    {
+      "difficulty": 2,
+      "tags": [
+        "js",
+        "react"
+      ],
+      "name": "js for learning advanced features",
+      "description": "Awesome deck for learning js",
+      "author": 1,
+      "id": 3
+    }
+  ],
+  "flashcards": [
+    {
+      "author": 1,
+      "question": "JS question 1",
+      "answer": "JS answer 1",
+      "decks": 1,
+      "category": "js",
+      "difficulty": 1,
+      "rating": 217,
+      "tags": [
+        1
+      ],
+      "id": 1
+    },
+    {
+      "author": 1,
+      "question": "JS question 2",
+      "answer": "JS answer 2",
+      "decks": 1,
+      "category": "js",
+      "difficulty": 1,
+      "rating": 2137,
+      "tags": [
+        1
+      ],
+      "id": 2
+    },
+    {
+      "author": 1,
+      "question": "JS question 3",
+      "answer": "JS answer 3",
+      "decks": 1,
+      "category": "js",
+      "difficulty": 1,
+      "rating": 217,
+      "tags": [
+        1
+      ],
+      "id": 3
+    },
+    {
+      "author": 1,
+      "question": "JS question 4",
+      "answer": "JS answer 4",
+      "decks": 1,
+      "category": "js",
+      "difficulty": 1,
+      "rating": 2137,
+      "tags": [
+        1
+      ],
+      "id": 4
+    },
+    {
+      "author": 1,
+      "question": "Python question 1",
+      "answer": "Python answer 1",
+      "decks": 2,
+      "category": "python",
+      "difficulty": 1,
+      "rating": 217,
+      "tags": [
+        1
+      ],
+      "id": 5
+    },
+    {
+      "author": 1,
+      "question": "Python question 2",
+      "answer": "Python answer 2",
+      "decks": 2,
+      "category": "python",
+      "difficulty": 1,
+      "rating": 2137,
+      "tags": [
+        1
+      ],
+      "id": 6
+    },
+    {
+      "author": 1,
+      "question": "Python question 3",
+      "answer": "Python answer 3",
+      "decks": 2,
+      "category": "python",
+      "difficulty": 1,
+      "rating": 217,
+      "tags": [
+        2
+      ],
+      "id": 7
+    },
+    {
+      "author": 1,
+      "question": "React question 1",
+      "answer": "React answer 1",
+      "decks": 3,
+      "category": "react",
+      "difficulty": 1,
+      "rating": 217,
+      "tags": [
+        1
+      ],
+      "id": 8
+    },
+    {
+      "author": 1,
+      "question": "React question 2",
+      "answer": "React answer 2",
+      "decks": 3,
+      "category": "react",
+      "difficulty": 1,
+      "rating": 2137,
+      "tags": [
+        1
+      ],
+      "id": 9
+    },
+    {
+      "author": 1,
+      "question": "React question 3",
+      "answer": "React answer 3",
+      "decks": 3,
+      "category": "react",
+      "difficulty": 3,
+      "rating": 217,
+      "tags": [
+        2
+      ],
+      "id": 10
+    },
+    {
+      "author": 1,
+      "question": "React question 4",
+      "answer": "React answer 4",
+      "decks": 3,
+      "category": "react",
+      "difficulty": 3,
+      "rating": 217,
+      "tags": [
+        2
+      ],
+      "id": 11
+    },
+    {
+      "author": 1,
+      "question": "React question 5",
+      "answer": "React answer 5",
+      "decks": 3,
+      "category": "react",
+      "difficulty": 3,
+      "rating": 217,
+      "tags": [
+        2
+      ],
+      "id": 12
+    }
+  ]
+}
