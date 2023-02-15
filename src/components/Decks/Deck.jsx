@@ -2,7 +2,7 @@ import {Badge, Card, Col, Row} from "react-bootstrap";
 import {faker} from '@faker-js/faker'
 import {Link} from "react-router-dom";
 
-function Deck({deck: {id, difficulty, tags, name, description, autor} = {}}) {
+function Deck({deck: {id, tags, name, description} = {}}) {
     return (<Col>
             <Link to={`/decks/${id}`}><Card>
                 <Card.Img variant="top" src={faker.image.cats(640,480,true)}/>

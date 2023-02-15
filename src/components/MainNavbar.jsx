@@ -13,7 +13,15 @@ function MainNavbar() {
                     <LinkContainer to="/">
                         <Nav.Link>Decks</Nav.Link>
                     </LinkContainer>
-                    <Nav.Link href="#features">Profile</Nav.Link>
+                    <LinkContainer to="/register">
+                        <Nav.Link>Register</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/login">
+                        <Nav.Link>Login</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/">
+                        <Nav.Link>Profile</Nav.Link>
+                    </LinkContainer>
                 </Nav>
             </Container>
         </Navbar>

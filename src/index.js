@@ -6,32 +6,45 @@ import Learning from "./components/Learning/Learning";
 import Layout from "./components/Layout/Layout";
 import Decks from "./components/Decks/Decks";
 import FinishLearning from "./components/FinishLearning/FinishLearning";
+import Register from "./components/Auth/Register";
+import Login from "./components/Auth/Login";
+import {AuthProvider} from "./context/AuthProvider";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Layout/>,
+        element: <Layout />,
         children: [
             {
                 path: '',
-                element: <Decks/>
+                element: <Decks />
             },
             {
                 path: 'end',
-                element: <FinishLearning/>
+                element: <FinishLearning />
+            },
+            {
+                path: 'register',
+                element: <Register />
+            },
+            {
+                path: 'login',
+                element: <Login />
             }
         ]
     },
     {
         path: "/decks/:id/",
-        element: <Learning/>,
+        element: <Learning />,
     }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <RouterProvider router={router}/>
+        <AuthProvider>
+            <RouterProvider router={router} />
+        </AuthProvider>
     </React.StrictMode>
 );
 
