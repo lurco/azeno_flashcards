@@ -3,8 +3,11 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {LinkContainer} from "react-router-bootstrap";
+import useLogout from "../hooks/useLogout";
 
 function MainNavbar() {
+    const logout = useLogout();
+
     return (
         <Navbar bg="primary" variant="dark">
             <Container>
@@ -22,6 +25,10 @@ function MainNavbar() {
                     <LinkContainer to="/">
                         <Nav.Link>Profile</Nav.Link>
                     </LinkContainer>
+                    <LinkContainer to="/flashcards">
+                        <Nav.Link>Flashcards</Nav.Link>
+                    </LinkContainer>
+                    <Nav.Link onClick={logout}>Logout</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>

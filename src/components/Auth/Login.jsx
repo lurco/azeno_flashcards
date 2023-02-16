@@ -1,15 +1,26 @@
-import {useContext, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {useLocalStorage} from "../../hooks/useLocalStorage";
 import AuthContext from "../../context/AuthProvider";
-import {useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 
 function Login() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [isLogged, setIsLogged] = useState(false);
     const setTokens = useLocalStorage('tokens', {})[1];
-    const {setAuth} = useContext(AuthContext);
+    const {auth, setAuth} = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
+    useEffect(() => {
+        if(isLogged){
+            navigate(from, {
+                replace: true
+            });
+        }
+    }, [auth]);
 
 
     async function handleLogin() {
@@ -24,7 +35,7 @@ function Login() {
         const accessToken = await response.json();
         setTokens({access: accessToken.access, refresh: accessToken.refresh});
         setAuth(accessToken);
-        navigate('/');
+        setIsLogged(true);
     }
 
     return (

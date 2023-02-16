@@ -1,16 +1,17 @@
-import {Badge, Card, Col, Row} from "react-bootstrap";
-import {faker} from '@faker-js/faker'
 import {Link} from "react-router-dom";
+import {Badge, Card, Col} from "react-bootstrap";
+import {faker} from "@faker-js/faker";
 
-function Deck({deck: {id, tags, name, description} = {}}) {
+function CardFlash({card: {question, answer, tags, id}}) {
+
     return (
         <Col>
             <Link to={`/decks/${id}`}><Card>
-                <Card.Img variant="top" src={faker.image.cats(640,480,true)}/>
+                <Card.Img variant="top" src={faker.image.cats(640, 480, true)}/>
                 <Card.Body>
-                    <Card.Title>{name}</Card.Title>
+                    <Card.Title>{question}</Card.Title>
                     <Card.Text>
-                        {description}
+                        {answer}
                     </Card.Text>
                     <Card.Text>
                         {tags.map((tag) => (<Badge pill bg="primary" key={tag} className="me-1">
@@ -18,10 +19,11 @@ function Deck({deck: {id, tags, name, description} = {}}) {
                         </Badge>))}
                     </Card.Text>
                 </Card.Body>
-                </Card>
+            </Card>
             </Link>
         </Col>
-    );
+    )
+
 }
 
-export default Deck;
+export default CardFlash;
